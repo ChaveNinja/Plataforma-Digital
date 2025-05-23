@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Interativo - Completo</title>
+    <style id="style-mode">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: #f5f5f5;
+        }
+        input, button {
+            margin-top: 10px;
+            padding: 8px;
+            font-size: 16px;
+        }
+        .quiz, .certificado, .progresso, .timer {
+            background: #fff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 700px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .dark-mode .quiz, .dark-mode .certificado, .dark-mode .progresso, .dark-mode .timer {
+            background: #2c2c2c;
+            color: #f5f5f5;
+        }
+        .barra {
+            height: 20px;
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .barra > div {
+            height: 100%;
+            width: 0;
+            background-color: #4caf50;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Curso Interativo Completo</h1>
+    <label>Seu nome:</label>
+    <input type="text" id="nomeAluno" placeholder="Digite seu nome" />
+
+    <div class="timer">
+        <strong>⏳ Tempo restante: <span id="tempo">15:00</span></strong>
+    </div>
+
+    <div class="progresso">
+        <strong>📈 Progresso:</strong>
+        <div class="barra"><div id="barraProgresso"></div></div>
+    </div>
+
+    <div class="quiz" id="curso_1">
+        <h2>Introdução à Programação</h2>
+        <p><strong>Conteúdo:</strong> Neste curso, você aprenderá os fundamentos essenciais da programação. Começaremos entendendo o que são variáveis e como elas armazenam diferentes tipos de dados em um programa. Depois, vamos explorar condições lógicas (como o famoso 'se... então...') que permitem que seu programa tome decisões. Por fim, mergulharemos nos laços de repetição, como for e while, que são fundamentais para automatizar tarefas repetitivas. Ao final deste curso, você será capaz de criar pequenos programas que interajam com o usuário, tomem decisões e repitam tarefas de forma automatizada.</p>
+        <p><strong>Pergunta:</strong> O que é uma variável?</p>
+        <label><input type="radio" name="q1" value="0"> A) Uma função</label><br>
+        <label><input type="radio" name="q1" value="1"> B) Um valor que pode mudar</label><br>
+        <label><input type="radio" name="q1" value="2"> C) Uma constante</label><br>
+        <label><input type="radio" name="q1" value="3"> D) Um operador lógico</label><br>
+        <button onclick="verificarResposta('1', 1)">Responder</button>
+        <p id="resposta_1"></p>
+    </div>
+    
+    <div class="quiz" id="curso_2">
+        <h2>Lógica de Programação</h2>
+        <p><strong>Conteúdo:</strong> A lógica de programação é a base de qualquer desenvolvimento de software. Neste curso, você entenderá como estruturar seu pensamento para resolver problemas de forma lógica e clara. Aprenderemos a montar algoritmos passo a passo, representando as soluções de maneira sequencial. Você também será introduzido aos fluxogramas, que são diagramas visuais usados para mapear o fluxo de um programa, e ao pseudocódigo, uma forma simplificada de escrever lógica de programação usando linguagem quase natural. Esse curso vai te preparar para qualquer linguagem de programação, desenvolvendo sua capacidade de pensar como um programador.</p>
+        <p><strong>Pergunta:</strong> O que é um algoritmo?</p>
+        <label><input type="radio" name="q2" value="0"> A) Um banco de dados</label><br>
+        <label><input type="radio" name="q2" value="1"> B) Uma linguagem de programação</label><br>
+        <label><input type="radio" name="q2" value="2"> C) Uma sequência de passos para resolver um problema</label><br>
+        <label><input type="radio" name="q2" value="3"> D) Uma biblioteca</label><br>
+        <button onclick="verificarResposta('2', 2)">Responder</button>
+        <p id="resposta_2"></p>
+    </div>
+    
+    <div class="quiz" id="curso_3">
+        <h2>Desenvolvimento Web com HTML e CSS</h2>
+        <p><strong>Conteúdo:</strong> Neste curso, você aprenderá a construir páginas web utilizando HTML e CSS. O HTML será usado para estruturar o conteúdo do site, como títulos, parágrafos, imagens e links. Já o CSS será responsável pelo estilo visual da página, como cores, fontes, espaçamentos e alinhamentos. Ao final do curso, você conseguirá criar um site com visual profissional e layout responsivo para dispositivos móveis.</p>
+        <p><strong>Pergunta:</strong> Para que serve o CSS?</p>
+        <label><input type="radio" name="q3" value="0"> A) Executar lógica de programação</label><br>
+        <label><input type="radio" name="q3" value="1"> B) Estilizar o conteúdo HTML</label><br>
+        <label><input type="radio" name="q3" value="2"> C) Fazer consultas a banco de dados</label><br>
+        <label><input type="radio" name="q3" value="3"> D) Enviar e-mails automáticos</label><br>
+        <button onclick="verificarResposta('3', 1)">Responder</button>
+        <p id="resposta_3"></p>
+    </div>
+    
+    <div class="quiz" id="curso_4">
+        <h2>Python para Iniciantes</h2>
+        <p><strong>Conteúdo:</strong> Este curso é voltado para quem nunca programou antes e quer começar com uma linguagem poderosa e versátil: o Python. Você aprenderá desde os conceitos básicos como sintaxe, variáveis, operadores e tipos de dados, até estruturas de decisão, loops e criação de funções. Também vamos explorar a criação de pequenos projetos práticos para aplicar o conhecimento na prática.</p>
+        <p><strong>Pergunta:</strong> O que é o Python?</p>
+        <label><input type="radio" name="q4" value="0"> A) Um sistema operacional</label><br>
+        <label><input type="radio" name="q4" value="1"> B) Uma linguagem de programação</label><br>
+        <label><input type="radio" name="q4" value="2"> C) Um aplicativo de planilhas</label><br>
+        <label><input type="radio" name="q4" value="3"> D) Um navegador web</label><br>
+        <button onclick="verificarResposta('4', 1)">Responder</button>
+        <p id="resposta_4"></p>
+    </div>
+    
+    <div class="quiz" id="curso_5">
+        <h2>Banco de Dados com SQL</h2>
+        <p><strong>Conteúdo:</strong> Aprenda a criar, consultar e manipular bancos de dados relacionais utilizando a linguagem SQL. Este curso aborda os principais comandos como SELECT, INSERT, UPDATE e DELETE, além de ensinar como criar tabelas e relacionamentos entre dados. Ao final, você será capaz de trabalhar com bancos de dados em aplicações reais.</p>
+        <p><strong>Pergunta:</strong> Qual comando SQL é usado para buscar dados?</p>
+        <label><input type="radio" name="q5" value="0"> A) SELECT</label><br>
+        <label><input type="radio" name="q5" value="1"> B) UPDATE</label><br>
+        <label><input type="radio" name="q5" value="2"> C) DELETE</label><br>
+        <label><input type="radio" name="q5" value="3"> D) INSERT</label><br>
+        <button onclick="verificarResposta('5', 0)">Responder</button>
+        <p id="resposta_5"></p>
+    </div>
+    
+    <button onclick="finalizar()">Finalizar Curso</button>
+    <p id="resultadoFinal"></p>
+        <h3>📋 Resumo das Respostas:</h3>
+        <table id="resumoQuestoes" border="1" style="display:none; border-collapse: collapse; margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>Curso</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        
+
+    <div class="certificado" id="certificado" style="display:none;">
+        <h2>🎓 Certificado de Conclusão</h2>
+        <p>Certificamos que <strong id="certNome"></strong> concluiu com êxito este curso interativo.</p>
+    </div>
+
+    <h3>🌗 Modo Escuro</h3>
+    <button onclick="alternarModo()">Alternar Tema</button>
+
+<script>
+let tempoRestante = 900;
+let acertos = {};
+let respondidos = 0;
+let totalQuestoes = 5;
+let timer = setInterval(atualizarTimer, 1000);
+
+function atualizarTimer() {
+    if (tempoRestante <= 0) {
+        clearInterval(timer);
+        document.getElementById("tempo").innerText = "Tempo esgotado!";
+        document.querySelectorAll("button[onclick^='verificarResposta']").forEach(btn => btn.disabled = true);
+        document.querySelector("button[onclick='finalizar()']").disabled = true;
+        return;
+    }
+    tempoRestante--;
+    let min = Math.floor(tempoRestante / 60);
+    let seg = tempoRestante % 60;
+    document.getElementById("tempo").innerText = 
+        `${min.toString().padStart(2, '0')}:${seg.toString().padStart(2, '0')}`;
+}
+
+function verificarResposta(id, correta) {
+    let nome = document.getElementById("nomeAluno").value.trim();
+    if (!nome) {
+        alert("Digite seu nome antes de responder.");
+        return;
+    }
+    let op = document.querySelector(`input[name='q${id}']:checked`);
+    if (!op) {
+        alert("Selecione uma alternativa.");
+        return;
+    }
+    let res = document.getElementById(`resposta_${id}`);
+    if (parseInt(op.value) === correta) {
+        res.innerText = "✅ Correto!";
+        res.style.color = "green";
+        acertos[id] = true;
+    } else {
+        res.innerText = "❌ Errado.";
+        res.style.color = "red";
+        enviarResultado(nome, media, "Reprovado");
+        mostrarResumo();
+        enviarResultado(nome, media, 'Reprovado');
+        acertos[id] = false;
+    }
+    atualizarProgresso();
+    localStorage.setItem("r_" + id, op.value);
+}
+
+function atualizarProgresso() {
+    let total = Object.keys(acertos).length;
+    let pct = (total / totalQuestoes) * 100;
+    document.getElementById("barraProgresso").style.width = pct + "%";
+}
+
+function finalizar() {
+    let nome = document.getElementById("nomeAluno").value.trim();
+    if (!nome || Object.keys(acertos).length < totalQuestoes) {
+        alert("Responda todas as perguntas e preencha o nome.");
+        return;
+    }
+    let certas = Object.values(acertos).filter(v => v).length;
+    let media = (certas / totalQuestoes) * 100;
+    let res = document.getElementById("resultadoFinal");
+    if (media >= 70) {
+        res.innerText = `${nome}, aprovado com média ${media.toFixed(0)}%.`;
+        res.style.color = "green";
+        document.getElementById("certNome").innerText = nome;
+        document.getElementById("certificado").style.display = "block";
+        enviarResultado(nome, media, "Aprovado");
+        mostrarResumo();
+        enviarResultado(nome, media, 'Aprovado');
+    } else {
+        res.innerText = `${nome}, reprovado com média ${media.toFixed(0)}%.`;
+        res.style.color = "red";
+        enviarResultado(nome, media, "Reprovado");
+        mostrarResumo();
+        enviarResultado(nome, media, 'Reprovado');
+    }
+}
+
+function alternarModo() {
+    document.body.classList.toggle("dark-mode");
+}
+
+window.onload = () => {
+    for (let i = 1; i <= totalQuestoes; i++) {
+        let r = localStorage.getItem("r_" + i);
+        if (r !== null) {
+            document.querySelector(`input[name='q${i}'][value='${r}']`).checked = true;
+            acertos[i] = parseInt(r) === parseInt(1);
+        }
+    }
+    atualizarProgresso();
+}
+
+function enviarResultado(nome, media, status) {
+    fetch('/registro', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            nome: nome,
+            media: parseInt(media),
+            status: status
+        })
+    }).then(res => res.json())
+      .then(data => console.log("Resultado registrado:", data))
+      .catch(err => console.error("Erro ao registrar resultado:", err));
+}
+
+
+function mostrarResumo() {
+    const tabela = document.getElementById("resumoQuestoes");
+    const corpo = tabela.querySelector("tbody");
+    corpo.innerHTML = "";
+    tabela.style.display = "table";
+
+    const cursos = document.querySelectorAll(".quiz");
+    cursos.forEach((curso) => {
+        const cursoNome = curso.querySelector("h2").innerText;
+        const id = curso.id.replace("curso_", "");
+        const marcada = document.querySelector("input[name='q" + id + "']:checked");
+        const correta = document.querySelector("p#resposta_" + id).innerText.includes("✅");
+        const linha = document.createElement("tr");
+        linha.innerHTML = `<td>${cursoNome}</td><td>${correta ? "✅ Correto" : "❌ Incorreto"}</td>`;
+        corpo.appendChild(linha);
+    });
+}
+</script>
+</body>
+</html>

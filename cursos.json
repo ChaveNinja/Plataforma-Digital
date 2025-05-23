@@ -1,0 +1,82 @@
+{
+    "1": {
+        "nome": "Introdução à Programação",
+        "conteudo": "Neste curso, você aprenderá os fundamentos essenciais da programação. Começaremos entendendo o que são variáveis e como elas armazenam diferentes tipos de dados em um programa. Depois, vamos explorar condições lógicas (como o famoso 'se... então...') que permitem que seu programa tome decisões. Por fim, mergulharemos nos laços de repetição, como for e while, que são fundamentais para automatizar tarefas repetitivas. Ao final deste curso, você será capaz de criar pequenos programas que interajam com o usuário, tomem decisões e repitam tarefas de forma automatizada.",
+        "quiz": [
+            {
+                "pergunta": "O que é uma variável?",
+                "alternativas": [
+                    "Uma função",
+                    "Um valor que pode mudar",
+                    "Uma constante",
+                    "Um operador lógico"
+                ],
+                "resposta": 1
+            }
+        ]
+    },
+    "2": {
+        "nome": "Lógica de Programação",
+        "conteudo": "A lógica de programação é a base de qualquer desenvolvimento de software. Neste curso, você entenderá como estruturar seu pensamento para resolver problemas de forma lógica e clara. Aprenderemos a montar algoritmos passo a passo, representando as soluções de maneira sequencial. Você também será introduzido aos fluxogramas, que são diagramas visuais usados para mapear o fluxo de um programa, e ao pseudocódigo, uma forma simplificada de escrever lógica de programação usando linguagem quase natural. Esse curso vai te preparar para qualquer linguagem de programação, desenvolvendo sua capacidade de pensar como um programador.",
+        "quiz": [
+            {
+                "pergunta": "O que é um algoritmo?",
+                "alternativas": [
+                    "Um banco de dados",
+                    "Uma linguagem de programação",
+                    "Uma sequência de passos para resolver um problema",
+                    "Uma biblioteca"
+                ],
+                "resposta": 2
+            }
+        ]
+    },
+    "3": {
+        "nome": "Desenvolvimento Web com HTML e CSS",
+        "conteudo": "Neste curso, você aprenderá a construir páginas web utilizando HTML e CSS. O HTML será usado para estruturar o conteúdo do site, como títulos, parágrafos, imagens e links. Já o CSS será responsável pelo estilo visual da página, como cores, fontes, espaçamentos e alinhamentos. Ao final do curso, você conseguirá criar um site com visual profissional e layout responsivo para dispositivos móveis.",
+        "quiz": [
+            {
+                "pergunta": "Para que serve o CSS?",
+                "alternativas": [
+                    "Executar lógica de programação",
+                    "Estilizar o conteúdo HTML",
+                    "Fazer consultas a banco de dados",
+                    "Enviar e-mails automáticos"
+                ],
+                "resposta": 1
+            }
+        ]
+    },
+    "4": {
+        "nome": "Python para Iniciantes",
+        "conteudo": "Este curso é voltado para quem nunca programou antes e quer começar com uma linguagem poderosa e versátil: o Python. Você aprenderá desde os conceitos básicos como sintaxe, variáveis, operadores e tipos de dados, até estruturas de decisão, loops e criação de funções. Também vamos explorar a criação de pequenos projetos práticos para aplicar o conhecimento na prática.",
+        "quiz": [
+            {
+                "pergunta": "O que é o Python?",
+                "alternativas": [
+                    "Um sistema operacional",
+                    "Uma linguagem de programação",
+                    "Um aplicativo de planilhas",
+                    "Um navegador web"
+                ],
+                "resposta": 1
+            }
+        ]
+    },
+    "5": {
+        "nome": "Banco de Dados com SQL",
+        "conteudo": "Aprenda a criar, consultar e manipular bancos de dados relacionais utilizando a linguagem SQL. Este curso aborda os principais comandos como SELECT, INSERT, UPDATE e DELETE, além de ensinar como criar tabelas e relacionamentos entre dados. Ao final, você será capaz de trabalhar com bancos de dados em aplicações reais.",
+        "quiz": [
+            {
+                "pergunta": "Qual comando SQL é usado para buscar dados?",
+                "alternativas": [
+                    "SELECT",
+                    "UPDATE",
+                    "DELETE",
+                    "INSERT"
+                ],
+                "resposta": 0
+            }
+        ]
+    }
+}
